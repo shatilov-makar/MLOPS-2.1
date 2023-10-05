@@ -1,1 +1,4 @@
-
+[core]
+    remote = ssh-storage
+['remote "ssh-storage"']
+    url = ssh://makardvc@158.160.84.255/home/makardvc/projects
