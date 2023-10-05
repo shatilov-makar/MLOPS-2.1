@@ -31,7 +31,7 @@ y = df['Score']
 
 tfidf = TfidfVectorizer(min_df=3, ngram_range=(1, 3))
 tfidf.fit(X)
-with open('tokenizer\\tokenizer.pkl', "wb") as fd:
+with open('tokenizer/tokenizer.pkl', "wb") as fd:
     pickle.dump(tfidf, fd)
 
 

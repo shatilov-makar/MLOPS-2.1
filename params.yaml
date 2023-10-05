@@ -3,7 +3,6 @@ split:
 
 train:
   seed: 42
-  max_depth: 4
-  C: 2
-  gamma: 0.4
+  C: 1
+  gamma: 0.1
   kernel: 'linear'
