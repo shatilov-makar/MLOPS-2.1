@@ -74,13 +74,14 @@ stages:
       size: 156950795
     params:
       params.yaml:
-        train.C: 1
-        train.gamma: 0.1
+        train.C: 0.5
+        train.gamma: 0.05
         train.kernel: linear
     outs:
     - path: models/svm.pkl
-      md5: 149b5406a8002e79975fa28f7f96ac28
-      size: 10979633
+      hash: md5
+      md5: 2adecb5d3859ed1c9bf3b8e082ecfd23
+      size: 11380992
   evaluate:
     cmd: python3 scripts/model_scripts/evaluate.py data/stage3/test.csv models/svm.pkl
       tokenizer/tokenizer.pkl
@@ -89,8 +90,9 @@ stages:
       md5: 656a8ceb1aa3d7c99241225f5ecb6f0c
       size: 11068214
     - path: models/svm.pkl
-      md5: 149b5406a8002e79975fa28f7f96ac28
-      size: 10979633
+      hash: md5
+      md5: 2adecb5d3859ed1c9bf3b8e082ecfd23
+      size: 11380992
     - path: scripts/model_scripts/evaluate.py
       md5: 3df68642e2921e416ba01f0d7141c6a4
       size: 714
@@ -99,5 +101,6 @@ stages:
       size: 156950795
     outs:
     - path: evaluate/score.json
-      md5: 7dd4bac28fee2ea7c4b15cea5e1cb554
-      size: 29
+      hash: md5
+      md5: c2df37ea4b9060efc1817c84bca685f9
+      size: 19
